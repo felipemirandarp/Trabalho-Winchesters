@@ -2,15 +2,6 @@ html{
     scroll-behavior: smooth;
 }
 
-@font-face {
-    font-family: "Supernatural";
-    src: url(Supernatural_Knight.ttf);
-}
-
-h1{
-    font-family: "Supernatural";
-}
-
 body {
     display: flex;
     /* background-color: rgb(219, 187, 146); */

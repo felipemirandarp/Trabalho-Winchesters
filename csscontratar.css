@@ -1,0 +1,130 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    /* background-color: rgb(219, 187, 146); */
+    background-color: rgb(78, 1, 1) ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+header{
+    background-color: white;
+
+    h1{
+        color: white;
+    }
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    padding-top: 20px;
+}
+
+header img{
+    width: 150px;
+    padding-bottom: 20px;
+}
+
+nav{
+    width: 100%;
+    border-top: solid 4px black;
+    border-bottom: solid 4px black;
+    background-color: black;
+}
+
+nav ul{
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    li{
+        margin-left: -4px;
+        color: white;
+        width: 70px;
+        text-align: center;
+        justify-content: center;
+        display: inline-block;
+        padding: 14px;
+        border-right: solid 2px white;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+
+.activecontratar{
+    background-color: rgb(78, 1, 1);
+}
+
+#nav-sobre{
+    border-right: solid 2px white;
+}
+
+.conteiner-cadastro{
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+    padding: 50px;
+    label{
+        color: white;
+    }
+    background-color: black;
+    border: solid 2px white;
+    width: 800px;
+    height: 800px;
+
+}
+
+.conteiner-cadastro .input-nome{
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+}
+
+.conteiner-cadastro input{
+    position: absolute;
+    outline: none;
+    padding: 0 30px;
+    line-height: 40px;
+    border-radius: 10px;
+    background: transparent;
+    border: solid 2px white;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 999;
+}
+
+.conteiner-cadastro .label-line{
+    position: absolute;
+    bottom: 22%;
+    color: white;
+    padding: 0 25px;
+    margin: 0 20px;
+    background-color: black;
+    transition: 0.2s ease;
+}
+
+.conteiner-cadastro input:focus,
+.conteiner-cadastro input:valid{
+    color: rgb(78, 1, 1);
+    border: solid 2px rgb(78, 1, 1);
+}
+
+.conteiner-cadastro input:focus + .label-line,
+.conteiner-cadastro input:valid + .label-line{
+        color: greenyellow;
+        line-height: 30px;
+        padding: 0 10px;
+        transform: translate(0px, -50px) scale(0.88);
+        z-index: 999;
+
+        label{
+            color: rgb(78, 1, 1);
+        }
+}
+
