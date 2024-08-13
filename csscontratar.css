@@ -2,6 +2,12 @@ html{
     scroll-behavior: smooth;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     /* background-color: rgb(219, 187, 146); */
@@ -10,6 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100vw;
     margin: 0;
 }
 header{
@@ -18,7 +25,7 @@ header{
     h1{
         color: white;
     }
-    width: 100%;
+    width: 100vw;
     left: 0;
     top: 0;
     position: absolute;
@@ -31,7 +38,7 @@ header img{
 }
 
 nav{
-    width: 100%;
+    width: 100vw;
     border-top: solid 4px black;
     border-bottom: solid 4px black;
     background-color: black;
@@ -74,10 +81,22 @@ nav ul{
         color: white;
     }
     background-color: black;
+    opacity: 100%;
+    box-shadow: -2px -2px 30px yellow;
+    box-shadow:  2px 2px 30px yellow;
     border: solid 2px white;
     width: 800px;
-    height: 800px;
+    height: 600px;
+    background-position-x: 60%;
+}
 
+.container-opacity{
+    display: flex;
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    padding: 50px;
+    margin-top: 300px;
 }
 
 .conteiner-cadastro .input-nome{
@@ -111,8 +130,11 @@ nav ul{
 
 .conteiner-cadastro input:focus,
 .conteiner-cadastro input:valid{
-    color: rgb(78, 1, 1);
-    border: solid 2px rgb(78, 1, 1);
+    /* color: rgb(78, 1, 1);
+    border: solid 2px rgb(78, 1, 1); */
+
+    color: red;
+    border: solid 2px red;
 }
 
 .conteiner-cadastro input:focus + .label-line,
@@ -124,7 +146,26 @@ nav ul{
         z-index: 999;
 
         label{
-            color: rgb(78, 1, 1);
+            /* color: rgb(78, 1, 1); */
+
+            color: red;
         }
 }
 
+.tigrinho{
+    display: flex;
+    position: absolute;
+}
+
+.tigrinho img{
+    position: absolute;
+    top: -210px;
+    right: -700px;
+    width: 30px;
+    opacity: 10%;
+}
+
+.wallpaper-tigre{
+    background-image: url(img-trigre/tigre.png);
+    background-size: 100%;
+}
