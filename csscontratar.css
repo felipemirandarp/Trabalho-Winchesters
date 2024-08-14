@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -86,17 +91,8 @@ nav ul{
     box-shadow:  2px 2px 30px yellow;
     border: solid 2px white;
     width: 800px;
-    height: 600px;
+    height: 1000px;
     background-position-x: 60%;
-}
-
-.container-opacity{
-    display: flex;
-    position: absolute;
-    width: 800px;
-    height: 600px;
-    padding: 50px;
-    margin-top: 300px;
 }
 
 .conteiner-cadastro .input-nome{
@@ -105,7 +101,7 @@ nav ul{
     line-height: 80px;
 }
 
-.conteiner-cadastro input{
+.conteiner-cadastro input, .container-cdastro textarea{
     position: absolute;
     outline: none;
     padding: 0 30px;
@@ -139,7 +135,6 @@ nav ul{
 
 .conteiner-cadastro input:focus + .label-line,
 .conteiner-cadastro input:valid + .label-line{
-        color: greenyellow;
         line-height: 30px;
         padding: 0 10px;
         transform: translate(0px, -50px) scale(0.88);
@@ -168,4 +163,39 @@ nav ul{
 .wallpaper-tigre{
     background-image: url(img-trigre/tigre.png);
     background-size: 100%;
+}
+
+#input-email{
+    width: 700px;
+}
+
+.selector-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 250px;
+    height: 50px;
+    color: white;
+
+    margin: 0 0 35px 0;
+}
+
+.selector-container .select-box{
+    color: white;
+    width: 100%;
+    border: solid white 2px;
+    border-radius: 10px;
+    appearance: none;
+    padding: 0 30px 0 15px;
+    background-color: rgb(78, 1, 1);
+    font-size: 20px;
+}
+
+.selector-container p{
+    padding: 15px 20px 0 0;
+}
+
+#input-caract {
+    width: 700px;
+    height: 400px;
 }
