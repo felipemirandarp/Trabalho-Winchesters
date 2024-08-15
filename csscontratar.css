@@ -21,7 +21,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    width: 100vw;
     margin: 0;
 }
 header{
@@ -30,7 +29,7 @@ header{
     h1{
         color: white;
     }
-    width: 100vw;
+    width: 100%;
     left: 0;
     top: 0;
     position: absolute;
@@ -43,7 +42,7 @@ header img{
 }
 
 nav{
-    width: 100vw;
+    width: 100%;
     border-top: solid 4px black;
     border-bottom: solid 4px black;
     background-color: black;
@@ -77,10 +76,23 @@ nav ul{
     border-right: solid 2px white;
 }
 
+.container-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 700px;
+    color: white;
+    background-color: black;
+}
+
 .conteiner-cadastro{
     display: flex;
     flex-direction: column;
-    margin-top: 300px;
+    margin-top: 30px;
     padding: 50px;
     label{
         color: white;
@@ -91,8 +103,8 @@ nav ul{
     box-shadow:  2px 2px 30px yellow;
     border: solid 2px white;
     width: 800px;
-    height: 1000px;
-    background-position-x: 60%;
+    height: 800px;
+    margin-bottom: 200px;
 }
 
 .conteiner-cadastro .input-nome{
@@ -101,7 +113,7 @@ nav ul{
     line-height: 80px;
 }
 
-.conteiner-cadastro input, .container-cdastro textarea{
+.conteiner-cadastro input{
     position: absolute;
     outline: none;
     padding: 0 30px;
@@ -109,9 +121,21 @@ nav ul{
     border-radius: 10px;
     background: transparent;
     border: solid 2px white;
-    background: transparent;
     transition: 0.1s ease;
     z-index: 999;
+}
+
+.conteiner-cadastro textarea{
+    position: absolute;
+    outline: none;
+    padding: 0 30px;
+    line-height: 40px;
+    border-radius: 10px;
+    background: transparent;
+    border: solid 2px white;
+    transition: 0.1s ease;
+    z-index: 999;
+    margin-bottom: 30px;
 }
 
 .conteiner-cadastro .label-line{
@@ -125,7 +149,7 @@ nav ul{
 }
 
 .conteiner-cadastro input:focus,
-.conteiner-cadastro input:valid{
+.conteiner-cadastro textarea:focus{
     /* color: rgb(78, 1, 1);
     border: solid 2px rgb(78, 1, 1); */
 
@@ -134,7 +158,7 @@ nav ul{
 }
 
 .conteiner-cadastro input:focus + .label-line,
-.conteiner-cadastro input:valid + .label-line{
+.conteiner-cadastro textarea:focus + .label-line{
         line-height: 30px;
         padding: 0 10px;
         transform: translate(0px, -50px) scale(0.88);
@@ -176,26 +200,90 @@ nav ul{
     width: 250px;
     height: 50px;
     color: white;
-
+    background-color: rgb(78, 1, 1);
     margin: 0 0 35px 0;
+    border-radius: 10px;
 }
 
 .selector-container .select-box{
-    color: white;
+    color: black;
     width: 100%;
     border: solid white 2px;
     border-radius: 10px;
     appearance: none;
     padding: 0 30px 0 15px;
-    background-color: rgb(78, 1, 1);
+    background-color: rgba(78, 1, 1, 0.1);
     font-size: 20px;
+    z-index: 1000;
 }
 
 .selector-container p{
     padding: 15px 20px 0 0;
 }
 
+.selector-container img{
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    right: 10px;
+}
+
 #input-caract {
     width: 700px;
     height: 400px;
+}
+
+#textarea-caract{
+    margin-bottom: 30px;
+}
+
+.container-buttom{
+    align-self: center;
+    position: relative;
+    width: 96px;
+    height: 45px;
+    margin-top: 170px;
+}
+
+.container-buttom button{
+    width: 96px;
+    color: white;
+    padding: 5px;
+    background: transparent;
+    border: solid 2px white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    transition: 0.1s;
+}
+
+.carregar-button{
+    transition: 0.2s;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    border: solid 2px  white;
+    border-radius: 10px;
+    transform-origin: left;
+}
+
+.container-buttom button:hover + .carregar-button{
+    width: 100%;
+    height: 100%;
+    /* transform: translate(0px, -50px) scale(1); */
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    background-color: white;
+    padding: 10px;
+    border-top: solid 4px black;
+    img{
+        width: 80px;
+    }
 }

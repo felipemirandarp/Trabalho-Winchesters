@@ -2,6 +2,12 @@ html{
     scroll-behavior: smooth;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     background-color: rgb(219, 187, 146);
@@ -63,4 +69,17 @@ nav ul{
 
 #nav-sobre{
     border-right: solid 2px white;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    background-color: white;
+    padding: 10px;
+    border-top: solid 4px black;
+    img{
+        width: 80px;
+    }
 }
